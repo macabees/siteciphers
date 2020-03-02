@@ -1,7 +1,7 @@
 FROM debian
 
 WORKDIR /
-ADD siteciphers
+ADD siteciphers .
 
 RUN apt-get -y update \ 
     && apt-get -y install \
@@ -12,4 +12,4 @@ RUN apt-get -y update \
 ENV TERM=xterm-256color
 ENV PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games
 
-ENTERYPOINT ["./siteciphers"]
+ENTRYPOINT ["./siteciphers"]
